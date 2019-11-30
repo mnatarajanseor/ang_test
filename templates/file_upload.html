@@ -1,15 +1,21 @@
-<h3>Upload Job Description File </h3>
+<div class="col-sm-5 col-md-5 center">
+<h4>Upload Job Description File </h4>
 
-{{ message }}
-
-    <div class="row" ng-controller="FileUploadController">
+    <div class="row Withborder" ng-controller="FileUploadController">
 
         <label for="fileToUpload">Select a File to Upload</label><br />
         <input type="file" ng-model-instant id="fileToUpload" onchange="angular.element(this).scope().setFiles(this)" />
     </div>
-    <div id="dropbox" class="dropbox" ng-class="dropClass"><span>{{dropText}}</span></div>
+    <div id="dropbox" class="dropbox" ng-class="dropClass"><span>{{dropText}}</span>
+      <br/><br/>
+      <span>File Size : 5Mb (Maximum)</span>
+
+      <br/><br/>
+      <span>File Formats : Excel, PDF, MS Word</span>
+    </div>
     <div ng-show="files.length || true">
         <div ng-repeat="file in files.slice(0)">
+
             <span>{{file.webkitRelativePath || file.name}}</span>
             (<span ng-switch="file.size > 1024*1024">
                 <span ng-switch-when="true">{{file.size / 1024 / 1024 | number:2}} MB</span>
@@ -23,4 +29,4 @@
                 <div class="uploaded" ng-style="{'width': progress+'%'}"></div>
             </div>
         </div>
-
+</div>

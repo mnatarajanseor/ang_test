@@ -1,9 +1,16 @@
 /* Styles go here */
-h3{
+h4 , .h4{
 text-transform : uppercase;
-}table { border-collapse: collapse; }
+}
+table { border-collapse: collapse; }
 .percent {
     position: absolute; width: 300px; height: 14px; z-index: 1; text-align: center; font-size: 0.8em; color: white;
+}
+.Withborder{
+  height : 300px;
+  border : 1px dotted #0f0f0f;
+  border-radius: 2px;
+  background-color: #f7f7f7;
 }
 .progress-bar {
     width: 300px; height: 14px;
@@ -21,7 +28,7 @@ text-transform : uppercase;
 }
 .dropbox {
     width: 15em;
-    height: 3em;
+    height: 30em;
     border: 2px solid #DDD;
     border-radius: 8px;
     background-color: #FEFFEC;
@@ -40,4 +47,3 @@ text-transform : uppercase;
 .dropbox.over {
     background-color: #bfb;
 }
-
